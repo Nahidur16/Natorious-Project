@@ -1,0 +1,38 @@
+.feature-box {
+    background-color: rgba(241, 241, 241, 0.952);
+    font-weight: 700;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(#000000, .3);
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-primary-lighter, $color-primary-darker);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+        -webkit-transform: translateY(-1.5rem) scale(1.03);
+        -moz-transform: translateY(-1.5rem) scale(1.03);
+        -ms-transform: translateY(-1.5rem) scale(1.03);
+        -o-transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &__text {
+        font-size: 1.5rem;
+    }
+}
