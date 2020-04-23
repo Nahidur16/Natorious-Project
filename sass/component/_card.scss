@@ -1,0 +1,179 @@
+.card {
+    perspective: 150rem;
+    height: 54rem;
+    position: relative;
+
+
+    &__slide {
+        height: 54rem;
+        overflow: hidden;
+        transition: all 0.8s ease;
+        -webkit-transition: all 0.8s ease;
+        -moz-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+        -o-transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .15);
+
+        &--front {
+            background-color: rgba(245, 245, 245, 0.938);
+        }
+
+        &--back {
+            background-color: orange;
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondery-light, $color-secondery-dark);
+
+
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-lighter, $color-primary-darker);
+
+
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+
+
+            }
+
+        }
+    }
+
+
+
+    &:hover &__slide--front {
+        transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+    }
+
+    &:hover &__slide--back {
+        transform: rotateY(0);
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+    }
+
+    &__picture {
+        background-size: cover;
+        background-blend-mode: screen;
+        height: 23rem;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondery-light, $color-secondery-dark), url(/img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-primary-lighter, $color-primary-darker), url(/img/nat-6.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(/img/nat-7.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 3rem;
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: absolute;
+        top: 12rem;
+        left: 2rem;
+        text-align: right;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondery-light, $color-secondery-dark);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-primary-lighter, $color-primary-darker);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1.2rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid rgba(107, 107, 107, 0.438);
+                }
+            }
+        }
+    }
+
+    //back side //
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    &__price-box {
+
+        margin-bottom: 8rem;
+        color: white;
+        text-align: center;
+
+        &-only {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        &-value {
+            font-size: 8rem;
+            font-weight: 100;
+        }
+    }
+}
