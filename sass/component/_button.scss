@@ -21,6 +21,16 @@
     border: none;
     cursor: pointer;
 
+    @include respond(tab-port) {
+
+        padding: .8rem 2rem;
+    }
+
+    @include respond(tab-land) {
+
+        padding: 1.3rem 3rem;
+    }
+
     &:hover {
         transform: translateY(-0.3rem);
         -webkit-transform: translateY(-0.3rem);

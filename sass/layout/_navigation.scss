@@ -20,6 +20,16 @@
         z-index: 2000;
         box-shadow: 1rem 2rem 4rem rgba(0, 0, 0, 0.404);
         cursor: pointer;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__background {
@@ -40,6 +50,16 @@
         -moz-transition: all 0.5s cubic-bezier(0.5, 0, 0.75, 0);
         -ms-transition: all 0.5s cubic-bezier(0.5, 0, 0.75, 0);
         -o-transition: all 0.5s cubic-bezier(0.5, 0, 0.75, 0);
+
+        @include respond(tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__nav {

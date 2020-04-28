@@ -4,7 +4,7 @@ body {
     font-size: 1rem;
     line-height: 1.7;
     color: $color-primary-grey;
-    padding: 2.5rem;
+
 }
 
 /* Header title style*/
@@ -24,6 +24,11 @@ body {
         padding-bottom: 1rem;
         animation: moveRight .9s ease-out;
         -webkit-animation: moveRight .9s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 3.5rem;
+        }
     }
 
     &--second {
@@ -33,6 +38,11 @@ body {
         letter-spacing: 1.7rem;
         animation: moveLeft .9s ease-out;
         -webkit-animation: moveLeft .9s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .2rem;
+
+        }
     }
 }
 
@@ -50,6 +60,14 @@ body {
     -ms-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
     letter-spacing: 1;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.2rem;
+    }
 
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
